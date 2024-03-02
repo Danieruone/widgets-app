@@ -35,6 +35,9 @@ class _CardsView extends StatelessWidget {
               _CardType1(elevation: card['elevation'], label: card['label'])),
           ...cards.map((card) =>
               _CardType2(elevation: card['elevation'], label: card['label'])),
+          const SizedBox(
+            height: 100,
+          )
         ],
       ),
     );
