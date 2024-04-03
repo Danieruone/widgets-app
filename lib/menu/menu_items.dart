@@ -24,4 +24,9 @@ const appMenuItems = <MenuItem>[
       subTitle: 'Styled cards',
       link: '/cards',
       icon: Icons.credit_card),
+  MenuItem(
+      title: 'Progress indicator',
+      subTitle: 'General and controlled',
+      link: '/progress',
+      icon: Icons.refresh_rounded),
 ];
