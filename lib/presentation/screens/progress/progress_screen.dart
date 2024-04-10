@@ -31,9 +31,25 @@ class _ProgressView extends StatelessWidget {
           ),
           CircularProgressIndicator(
             strokeWidth: 2,
-          )
+          ),
+          SizedBox(
+            height: 30,
+          ),
+          Text("Controlled progress indicator"),
+          SizedBox(
+            height: 20,
+          ),
         ],
       ),
     );
+  }
+}
+
+class _ControlledProgressIndicator extends StatelessWidget {
+  const _ControlledProgressIndicator();
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
