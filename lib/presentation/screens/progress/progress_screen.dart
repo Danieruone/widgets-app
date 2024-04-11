@@ -35,10 +35,11 @@ class _ProgressView extends StatelessWidget {
           SizedBox(
             height: 30,
           ),
-          Text("Controlled progress indicator"),
+          Text("Circular and linear"),
           SizedBox(
             height: 20,
           ),
+          _ControlledProgressIndicator()
         ],
       ),
     );
@@ -50,6 +51,17 @@ class _ControlledProgressIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 20),
+      child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+        CircularProgressIndicator(
+          strokeWidth: 2,
+        ),
+        SizedBox(
+          width: 20,
+        ),
+        Expanded(child: LinearProgressIndicator())
+      ]),
+    );
   }
 }
