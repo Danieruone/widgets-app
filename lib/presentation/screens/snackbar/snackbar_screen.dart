@@ -11,8 +11,11 @@ class SnackBarScreen extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton.extended(
         label: const Text("Show Snackbar"),
-        onPressed: () {},
         icon: const Icon(Icons.remove_red_eye_outlined),
+        onPressed: () {
+          ScaffoldMessenger.of(context)
+              .showSnackBar(const SnackBar(content: Text("Hello world")));
+        },
       ),
     );
   }
