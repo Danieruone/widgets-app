@@ -19,6 +19,15 @@ class SnackBarScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Snackbars and dialogs"),
       ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            FilledButton.tonal(
+                onPressed: () {}, child: const Text('Used licenses'))
+          ],
+        ),
+      ),
       floatingActionButton: FloatingActionButton.extended(
         label: const Text("Show Snackbar"),
         icon: const Icon(Icons.remove_red_eye_outlined),
