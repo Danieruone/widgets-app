@@ -13,6 +13,16 @@ class SnackBarScreen extends StatelessWidget {
     ));
   }
 
+  void openDialog(BuildContext context) {
+    showDialog(
+        context: context,
+        builder: (context) => const AlertDialog(
+              title: Text("Are you sure?"),
+              content: Text(
+                  "Amet qui deserunt anim et ad cupidatat sunt cillum fugiat elit consectetur.Voluptate ea eiusmod reprehenderit ea aute laboris ea aliqua laboris."),
+            ));
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +42,10 @@ class SnackBarScreen extends StatelessWidget {
                 },
                 child: const Text('Used licenses')),
             FilledButton.tonal(
-                onPressed: () {}, child: const Text('Show dialog'))
+                onPressed: () {
+                  return openDialog(context);
+                },
+                child: const Text('Show dialog'))
           ],
         ),
       ),
