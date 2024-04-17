@@ -16,10 +16,14 @@ class SnackBarScreen extends StatelessWidget {
   void openDialog(BuildContext context) {
     showDialog(
         context: context,
-        builder: (context) => const AlertDialog(
-              title: Text("Are you sure?"),
-              content: Text(
+        builder: (context) => AlertDialog(
+              title: const Text("Are you sure?"),
+              content: const Text(
                   "Amet qui deserunt anim et ad cupidatat sunt cillum fugiat elit consectetur.Voluptate ea eiusmod reprehenderit ea aute laboris ea aliqua laboris."),
+              actions: [
+                TextButton(onPressed: () {}, child: const Text("Cancel")),
+                FilledButton(onPressed: () {}, child: const Text("Accept")),
+              ],
             ));
   }
 
