@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SnackBarScreen extends StatelessWidget {
   const SnackBarScreen({super.key});
@@ -21,7 +22,9 @@ class SnackBarScreen extends StatelessWidget {
               content: const Text(
                   "Amet qui deserunt anim et ad cupidatat sunt cillum fugiat elit consectetur.Voluptate ea eiusmod reprehenderit ea aute laboris ea aliqua laboris."),
               actions: [
-                TextButton(onPressed: () {}, child: const Text("Cancel")),
+                TextButton(
+                    onPressed: () => context.pop(),
+                    child: const Text("Cancel")),
                 FilledButton(onPressed: () {}, child: const Text("Accept")),
               ],
             ));
