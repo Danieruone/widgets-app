@@ -9,7 +9,13 @@ class AnimatedContainerScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Animated container"),
       ),
-      body: Center(child: Container()),
+      body: Center(
+          child: Container(
+        width: 100,
+        height: 100,
+        decoration: BoxDecoration(
+            color: Colors.blueAccent, borderRadius: BorderRadius.circular(20)),
+      )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: const Icon(Icons.play_arrow),
