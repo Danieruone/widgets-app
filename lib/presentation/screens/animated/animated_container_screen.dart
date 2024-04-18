@@ -10,7 +10,9 @@ class AnimatedContainerScreen extends StatelessWidget {
         title: const Text("Animated container"),
       ),
       body: Center(
-          child: Container(
+          child: AnimatedContainer(
+        duration: const Duration(milliseconds: 400),
+        curve: Curves.easeOutCubic,
         width: 100,
         height: 100,
         decoration: BoxDecoration(
