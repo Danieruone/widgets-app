@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
 
-class AnimatedContainerScreen extends StatelessWidget {
+class AnimatedContainerScreen extends StatefulWidget {
   const AnimatedContainerScreen({super.key});
+
+  @override
+  State<AnimatedContainerScreen> createState() =>
+      _AnimatedContainerScreenState();
+}
+
+class _AnimatedContainerScreenState extends State<AnimatedContainerScreen> {
+  double width = 50;
+  double height = 50;
+  Color color = Colors.indigo;
+  double borderRadius = 10;
 
   @override
   Widget build(BuildContext context) {
@@ -13,10 +24,10 @@ class AnimatedContainerScreen extends StatelessWidget {
           child: AnimatedContainer(
         duration: const Duration(milliseconds: 400),
         curve: Curves.easeOutCubic,
-        width: 100,
-        height: 100,
+        width: width,
+        height: height,
         decoration: BoxDecoration(
-            color: Colors.blueAccent, borderRadius: BorderRadius.circular(20)),
+            color: color, borderRadius: BorderRadius.circular(borderRadius)),
       )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
