@@ -1,3 +1,4 @@
+import 'dart:math' show Random;
 import 'package:flutter/material.dart';
 
 class AnimatedContainerScreen extends StatefulWidget {
@@ -13,6 +14,15 @@ class _AnimatedContainerScreenState extends State<AnimatedContainerScreen> {
   double height = 50;
   Color color = Colors.indigo;
   double borderRadius = 10;
+
+  void changeShape() {
+    final random = Random();
+
+    width = random.nextInt(200) + 50;
+    height = random.nextInt(200) + 50;
+
+    setState(() {});
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +40,7 @@ class _AnimatedContainerScreenState extends State<AnimatedContainerScreen> {
             color: color, borderRadius: BorderRadius.circular(borderRadius)),
       )),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () => changeShape(),
         child: const Icon(Icons.play_arrow),
       ),
     );
