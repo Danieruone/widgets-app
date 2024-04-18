@@ -20,6 +20,10 @@ class _AnimatedContainerScreenState extends State<AnimatedContainerScreen> {
 
     width = random.nextInt(200) + 50;
     height = random.nextInt(200) + 50;
+    borderRadius = random.nextInt(50) + 10;
+
+    color = Color.fromRGBO(
+        random.nextInt(255), random.nextInt(255), random.nextInt(255), 1);
 
     setState(() {});
   }
