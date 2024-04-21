@@ -14,9 +14,14 @@ class ControlsScreen extends StatelessWidget {
   }
 }
 
-class _UIControlsView extends StatelessWidget {
+class _UIControlsView extends StatefulWidget {
   const _UIControlsView();
 
+  @override
+  State<_UIControlsView> createState() => _UIControlsViewState();
+}
+
+class _UIControlsViewState extends State<_UIControlsView> {
   @override
   Widget build(BuildContext context) {
     return ListView(
