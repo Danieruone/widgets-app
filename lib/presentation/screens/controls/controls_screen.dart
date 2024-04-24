@@ -22,6 +22,7 @@ class _UIControlsView extends StatefulWidget {
 }
 
 class _UIControlsViewState extends State<_UIControlsView> {
+  bool isDeveloper = true;
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -30,8 +31,12 @@ class _UIControlsViewState extends State<_UIControlsView> {
         SwitchListTile(
             title: const Text("Developer mode"),
             subtitle: const Text("Additional controls"),
-            value: true,
-            onChanged: (value) {})
+            value: isDeveloper,
+            onChanged: (value) {
+              setState(() {
+                isDeveloper = !isDeveloper;
+              });
+            })
       ],
     );
   }
