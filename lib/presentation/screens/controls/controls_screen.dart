@@ -43,7 +43,27 @@ class _UIControlsViewState extends State<_UIControlsView> {
         RadioListTile(
             value: Transportation.car,
             groupValue: selectedTransportation,
-            onChanged: (value) {})
+            onChanged: (value) => setState(() {
+                  selectedTransportation = Transportation.car;
+                })),
+        RadioListTile(
+            value: Transportation.boat,
+            groupValue: selectedTransportation,
+            onChanged: (value) => setState(() {
+                  selectedTransportation = Transportation.boat;
+                })),
+        RadioListTile(
+            value: Transportation.plane,
+            groupValue: selectedTransportation,
+            onChanged: (value) => setState(() {
+                  selectedTransportation = Transportation.plane;
+                })),
+        RadioListTile(
+            value: Transportation.submarine,
+            groupValue: selectedTransportation,
+            onChanged: (value) => setState(() {
+                  selectedTransportation = Transportation.submarine;
+                })),
       ],
     );
   }
