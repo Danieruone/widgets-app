@@ -41,24 +41,28 @@ class _UIControlsViewState extends State<_UIControlsView> {
               });
             }),
         RadioListTile(
+            title: const Text("Car"),
             value: Transportation.car,
             groupValue: selectedTransportation,
             onChanged: (value) => setState(() {
                   selectedTransportation = Transportation.car;
                 })),
         RadioListTile(
+            title: const Text("Boat"),
             value: Transportation.boat,
             groupValue: selectedTransportation,
             onChanged: (value) => setState(() {
                   selectedTransportation = Transportation.boat;
                 })),
         RadioListTile(
+            title: const Text("Plane"),
             value: Transportation.plane,
             groupValue: selectedTransportation,
             onChanged: (value) => setState(() {
                   selectedTransportation = Transportation.plane;
                 })),
         RadioListTile(
+            title: const Text("Submarine"),
             value: Transportation.submarine,
             groupValue: selectedTransportation,
             onChanged: (value) => setState(() {
