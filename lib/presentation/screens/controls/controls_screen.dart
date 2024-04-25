@@ -21,8 +21,11 @@ class _UIControlsView extends StatefulWidget {
   State<_UIControlsView> createState() => _UIControlsViewState();
 }
 
+enum Transportation { car, plane, boat, submarine }
+
 class _UIControlsViewState extends State<_UIControlsView> {
   bool isDeveloper = true;
+  Transportation selectedTransportation = Transportation.car;
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -36,7 +39,11 @@ class _UIControlsViewState extends State<_UIControlsView> {
               setState(() {
                 isDeveloper = !isDeveloper;
               });
-            })
+            }),
+        RadioListTile(
+            value: Transportation.car,
+            groupValue: selectedTransportation,
+            onChanged: (value) {})
       ],
     );
   }
