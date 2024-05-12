@@ -9,6 +9,15 @@ class InfiniteScroll extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Infinite Scroll"),
       ),
+      body: ListView.builder(
+        itemBuilder: (context, index) {
+          return FadeInImage(
+              width: double.infinity,
+              height: 300,
+              placeholder: const AssetImage('assets/images/jar-loading.gif'),
+              image: NetworkImage('https://picsum.photos/id/$index/500/300'));
+        },
+      ),
     );
   }
 }
