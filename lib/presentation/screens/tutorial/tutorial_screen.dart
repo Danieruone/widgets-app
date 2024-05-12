@@ -36,11 +36,22 @@ class AppTutorialScreen extends StatefulWidget {
 
 class _AppTutorialScreenState extends State<AppTutorialScreen> {
   final PageController pageViewController = PageController();
+  bool endReached = false;
 
   @override
   void initState() {
     super.initState();
-    pageViewController.addListener(() {});
+    pageViewController.addListener(() {
+      if (pageViewController.page == 2.0) {
+        setState(() {
+          endReached = true;
+        });
+      } else {
+        setState(() {
+          endReached = false;
+        });
+      }
+    });
   }
 
   @override
@@ -69,8 +80,8 @@ class _AppTutorialScreenState extends State<AppTutorialScreen> {
               right: 30,
               bottom: 30,
               child: FilledButton(
+                onPressed: endReached ? () => context.pop() : null,
                 child: const Text("Start"),
-                onPressed: () => context.pop(),
               ))
         ],
       ),
